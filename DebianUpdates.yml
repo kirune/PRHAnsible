@@ -1,6 +1,5 @@
 ---
 - hosts: all
-  accept_hostkey: yes
   become: true
   become_user: root
   tasks:
