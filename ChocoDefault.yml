@@ -2,7 +2,6 @@
 - name: Install default apps 
   hosts: all 
   gather_facts: true
-  connection: winrm
   tasks: 
 #Upgrade all installed packages  
   - name: Upgrade installed packages
