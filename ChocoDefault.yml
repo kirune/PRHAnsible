@@ -3,7 +3,13 @@
 - name: Install default apps 
   hosts: all 
   gather_facts: true
-  tasks: 
+
+tasks:   
+- name: Enable Chocolatey Feature to skip not installed packages
+  win_chocolatey_feature:
+    name: skipPackageUpgradesWhenNotInstalled
+    state: enabled
+    
 #Upgrade all installed packages  
   - name: Upgrade installed packages
     win_chocolatey:
