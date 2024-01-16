@@ -2,7 +2,7 @@
 ---
 - name: Install default apps
   hosts: all
-  gather_facts: true
+  gather_facts: false
 
   tasks:
     - name: Enable Chocolatey Feature to skip not installed packages
