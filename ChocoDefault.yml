@@ -2,7 +2,7 @@
 - name: Install default apps 
   hosts: all 
   gather_facts: true
-tasks: 
+  tasks: 
 #Upgrade all installed packages  
   - name: Upgrade installed packages
     win_chocolatey:
