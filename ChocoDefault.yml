@@ -1,57 +1,57 @@
 # code: language=ansible
 ---
-- name: Install default apps 
-  hosts: all 
+- name: Install default apps
+  hosts: all
   gather_facts: true
 
-tasks:   
-  - name: Enable Chocolatey Feature to skip not installed packages
-    win_chocolatey_feature:
-      name: skipPackageUpgradesWhenNotInstalled
-      state: enabled
-    
-#Upgrade all installed packages  
-  - name: Upgrade installed packages
-    win_chocolatey:
-      name: all
-      state: latest
-   
-  - name: install adobeReader
-    win_chocolatey:
-      name: adobereader
-      state: present
-    
-  - name: install GoogleChrome
-    win_chocolatey:
-      name: googlechrome
-      state: present
+  tasks:
+    - name: Enable Chocolatey Feature to skip not installed packages
+      win_chocolatey_feature:
+        name: skipPackageUpgradesWhenNotInstalled
+        state: enabled
 
-  - name: install zoom
-    win_chocolatey:
-      name: zoom
-      state: present
+    #Upgrade all installed packages
+    - name: Upgrade installed packages
+      win_chocolatey:
+        name: all
+        state: latest
 
-  - name: install autohotkey
-    win_chocolatey:
-      name: autohotkey
-      state: present
+    - name: install adobeReader
+      win_chocolatey:
+        name: adobereader
+        state: present
 
-  - name: install nodejs
-    win_chocolatey:
-      name: nodejs
-      state: present
+    - name: install GoogleChrome
+      win_chocolatey:
+        name: googlechrome
+        state: present
 
-  - name: install vscode
-    win_chocolatey:
-      name: vscode
-      state: present
+    - name: install zoom
+      win_chocolatey:
+        name: zoom
+        state: present
 
-  - name: install git
-    win_chocolatey:
-      name: git
-      state: present
+    - name: install autohotkey
+      win_chocolatey:
+        name: autohotkey
+        state: present
 
-  - name: install python3
-    win_chocolatey:
-      name: python3
-      state: present
+    - name: install nodejs
+      win_chocolatey:
+        name: nodejs
+        state: present
+
+    - name: install vscode
+      win_chocolatey:
+        name: vscode
+        state: present
+
+    - name: install git
+      win_chocolatey:
+        name: git
+        state: present
+
+    - name: install python3
+      win_chocolatey:
+        name: python3
+        state: present
