@@ -26,25 +26,25 @@
 
   - name: install autohotkey
     win_chocolatey:
-      name:autohotkey
+      name: autohotkey
       state: present
 
   - name: install nodejs
     win_chocolatey:
-      name:nodejs
+      name: nodejs
       state: present
 
   - name: install vscode
     win_chocolatey:
-      name:vscode
+      name: vscode
       state: present
 
   - name: install git
     win_chocolatey:
-      name:git
+      name: git
       state: present
 
   - name: install python3
     win_chocolatey:
-      name:python3
+      name: python3
       state: present
