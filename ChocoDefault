@@ -1,0 +1,56 @@
+---
+- name: Install default apps 
+  hosts: all 
+  gather_facts: false
+  tasks: 
+#Upgrade all installed packages  
+  - name: Upgrade installed packages
+    win_chocolatey:
+      name: all
+      state: latest
+   
+  - name: install adobeReader
+    win_chocolatey:
+      name: adobereader
+      state: present
+    
+  - name: install GoogleChrome
+    win_chocolatey:
+      name: googlechrome
+      state: present
+
+  - name: install zoom
+    win_chocolatey:
+      name: zoom
+      state: present
+
+  - name: install autohotkey
+    win_chocolatey:
+      name:autohotkey
+      state: present
+
+  - name: install nodejs
+    win_chocolatey:
+      name:nodejs
+      state: present
+
+  - name: install vscode
+    win_chocolatey:
+      name:vscode
+      state: present
+
+  - name: install git
+    win_chocolatey:
+      name:git
+      state: present
+
+  - name: install python3
+    win_chocolatey:
+      name:python3
+      state: present
+
+#install 7zip from Internet
+#  - name: Download the 7-Zip package
+#      win_get_url:
+ #       url: https://www.7-zip.org/a/7z1701-x64.msi
+#        dest: C:\temp\7z.msi
